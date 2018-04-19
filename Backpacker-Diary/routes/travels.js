@@ -1,6 +1,5 @@
 const express = require('express');
 const Travel = require('../models/travel');
-
 const router  = express.Router();
 
 
@@ -42,6 +41,10 @@ router.post('/', (req, res, next) => {
     return res.redirect('/travels');
   });
 });
+
+router.get('/trip', (req, res, next) => {
+  res.render('travels/trip');
+})
 
 
 module.exports = router;

@@ -1,9 +1,14 @@
 <ul>
+  <h1>Travel</h1> 
   <% travels.forEach((travel) => { %>
-    <li>
-      <h3>Place:</h3> 
-      <%= travel%>
-    </li>
+      <li><%= travel.title%></li>
+      <li><%= travel.place%></li>
+      <img src="<%= travel.imageUrl%>" style="width:125px; heigth:auto;"> 
+      <li style="list-style-type: none;">
+      <form action="/travels/trip">
+         <button type="submit" style="margin-bottom: 50px;"> + info</button>
+      </form>
+      </li>
   <% }) %>
 </ul>
 

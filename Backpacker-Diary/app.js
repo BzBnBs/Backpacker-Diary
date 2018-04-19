@@ -5,10 +5,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/backpacker-diaries, {useMongoClient: true}');
+
+mongoose.connect('mongodb://localhost/backpacker-diaries');
 
 
 var indexRouter = require('./routes/index');
+const travelRoutes = require('./routes/travels');
 
 var app = express();
 
@@ -25,6 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/travels', travelRoutes);
 
 
 

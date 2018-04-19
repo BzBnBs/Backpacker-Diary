@@ -1,18 +1,14 @@
 // bin/seeds.js
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/backpacker-diaries', {
-  useMongoClient: true,
-})
+mongoose.connect('mongodb://localhost/backpacker-diaries')
   .then(() => console.log('MongoDb connected...'))
   .catch(err => console.log(err));
 
 
 
-
-
 // mongoose.connect('mongodb://localhost/backpacker-diaries, {useMongoClient: true}');
- const Travel = require('../models/travel');
+const Travel = require('../models/travel');
 
 const travels = [
     {
@@ -46,7 +42,7 @@ function insertData() {
     travels.forEach((trav) => {
         Travel.create(trav, (err, doc) => {
             if (err) {
-                console.log(error);
+                console.log(err);
             } else {
                 console.log('documento insertado')
             }

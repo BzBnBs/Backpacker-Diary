@@ -7,7 +7,6 @@ mongoose.connect('mongodb://localhost/backpacker-diaries')
 
 
 
-// mongoose.connect('mongodb://localhost/backpacker-diaries, {useMongoClient: true}');
 const Travel = require('../models/travel');
 
 const travels = [

@@ -1,17 +1,36 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <a href="/travels">Travels</a>
-    <a href="/travels/new">New</a>
-    <form action="/search">
-    <input type="text" name="searchTerm" id="search-term">
-    <button type="submit">Search</button>
+<div>
+  <div class="background">
+    <img class="img-home" src="../images/home.jpg">
+    <a class="on-image" href="/travels">Travels</a>
+    <a class="on-image" href="/travels/new">New</a>
+  </div>
+  
+  
+  <form action="/travels/search" class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchTerm" id="search-term">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
-  </body>
-</html>
+</div>
+
+
+<ul>
+  <h1>Travel</h1>
+  <div class="card-deck">
+    <% travels.forEach((travel) => { %>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="<%= travel.imageUrl%>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= travel.title %>
+          </h5>
+          <p class="card-text">
+            <%= travel.date %>
+          </p>
+          <form action="/travels/<%= travel._id %> ">
+            <button type="submit" class="btn btn-primary"> + info</button>
+          </form>
+        </div>
+      </div>
+      <% }) %>
+  </div>
+</ul>

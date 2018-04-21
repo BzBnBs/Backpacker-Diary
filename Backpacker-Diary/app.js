@@ -3,16 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-<<<<<<< HEAD
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/exampleApp');
-=======
 const MongoClient = require('mongodb').MongoClient;
 const mongoose = require('mongoose');
+const expressLayouts = require('express-ejs-layouts');
 
 mongoose.connect('mongodb://localhost/backpacker-diaries');
 
->>>>>>> cbf1e8ff4c1ab7d06852cf290f3ac485ec79ada5
 
 var indexRouter = require('./routes/index');
 const travelRoutes = require('./routes/travels');
@@ -30,6 +26,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.static('public'));
+/* New */
+app.use(expressLayouts);
+app.set('layout', 'layouts/main-layout');
+app.set('views', __dirname + '/views');
 
 app.use('/', indexRouter);
 app.use('/travels', travelRoutes);

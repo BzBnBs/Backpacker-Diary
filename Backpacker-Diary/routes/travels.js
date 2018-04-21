@@ -109,13 +109,6 @@ router.post('/:id/delete', (req, res, next) => {
 
 });
 
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 1a9b5a7839dedd95b44d1e6ba98b6e89494cce7d
 
 
 module.exports = router;

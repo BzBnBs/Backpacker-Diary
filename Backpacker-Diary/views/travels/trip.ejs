@@ -7,6 +7,19 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Holaaaa TRIP!</h1>
+        <h1><%= travel.place %></h1>
+        <h3>" <%= travel.title %> "</h3>
+        <img src="<%= travel.imageUrl %>">
+        <p><%= travel.date %></p>
+        <p><%= travel.description %></p>
+
+        <form action="/travels/<%= travel._id %>/edit">
+            <button type="submit">Edit Trip</button>
+        </form>
+
+        <form action="/travels/<%= travel._id %>/delete" method="POST">
+            <button type="submit">Delete Trip</button>
+        </form>
+
     </body>
 </html>

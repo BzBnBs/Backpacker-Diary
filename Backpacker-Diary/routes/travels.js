@@ -10,8 +10,6 @@ router.get('/', (req, res, next) => {
       if (err) { return next(err) }
       console.log('travels', travels)
       res.render('travels/index', { travels });
-
-      console.log("viaje realizado")
     });
   });
 
@@ -42,6 +40,15 @@ router.post('/', (req, res, next) => {
   });
 });
 
+
+router.get('/search', (req, res, next) => {
+  const searchId = req.query.searchTerm;
+  
+  Travel.find({ place: searchId }, (err, travels) => {
+    if (err) { return next(err); }
+    res.render('travels/search', { travels });
+  });
+});
 
 
 router.get('/:id', (req, res, next) => {
@@ -96,17 +103,10 @@ router.post('/:id/delete', (req, res, next) => {
 
 });
 
-router.get('/search', (req, res) => {
-  let query = req.query.searchTerm;
-  
-  let queryRegex = new RegExp(query);
-  // We use a Regex here to find items that are similar to the search
-  // For instance if I searched "Yoga", I would then find the Yoga Mat
-  Travel.find({ place: queryRegex }, (err, travels) => {
-    if (err) { next(err) }
-    res.render('travels/search', { travels });
-  });
-});
+
+
+
+
 
 
 module.exports = router;

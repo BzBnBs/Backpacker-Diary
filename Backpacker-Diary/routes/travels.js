@@ -10,7 +10,6 @@ router.get('/', (req, res, next) => {
       if (err) { return next(err) }
       console.log('travels', travels)
       res.render('travels/index', { travels });
-
     });
   });
 
@@ -45,6 +44,15 @@ router.get('/search', (req, res, next) => {
   Travel.find({ place: query }, (err, travel) => {
     if (err) { next(err) }
     res.render('travels/search', { travel });
+  });
+});
+
+router.get('/search', (req, res, next) => {
+  const searchId = req.query.searchTerm;
+  
+  Travel.find({ place: searchId }, (err, travels) => {
+    if (err) { return next(err); }
+    res.render('travels/search', { travels });
   });
 });
 
@@ -101,6 +109,13 @@ router.post('/:id/delete', (req, res, next) => {
 
 });
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 1a9b5a7839dedd95b44d1e6ba98b6e89494cce7d
 
 
 module.exports = router;

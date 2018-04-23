@@ -1,6 +1,6 @@
 <div>
-  <div class="background">
-    <img class="img-home" src="../images/home.jpg">
+  <div class="banner-area overlay-bg">
+    <!-- <img class="img-home" src="../images/home.jpg"> -->
     <a class="on-image" href="/travels">Travels</a>
     <a class="on-image" href="/travels/new">New</a>
   </div>
@@ -10,27 +10,31 @@
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchTerm" id="search-term">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
+
+  <form action="/travels/search" class="search">
+    <input class="search-field input" type="search" placeholder="Search" aria-label="Search" name="searchTerm" id="search-term">
+    <button class="primary-btn banner-btn" type="submit">Search</button>
+  </form>
 </div>
 
-
-<ul>
-  <h1>Travel</h1>
-  <div class="card-deck">
-    <% travels.forEach((travel) => { %>
-      <div class="card" style="width: 18rem;">
+<h1>Travel</h1>
+<div class="row">
+  <% travels.forEach((travel) => { %>
+  <div class="col-md-4">
+      <div class="single-service">
         <img class="card-img-top" src="<%= travel.imageUrl%>" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">
+        <div class="text-center">
+          <h5 class="text-uppercase">
             <%= travel.title %>
           </h5>
           <p class="card-text">
             <%= travel.date %>
           </p>
           <form action="/travels/<%= travel._id %> ">
-            <button type="submit" class="btn btn-primary"> + info</button>
+            <button type="submit" class="primary-btn d-inline-flex align-items-center"> + info</button>
           </form>
         </div>
       </div>
-      <% }) %>
-  </div>
-</ul>
+    </div>
+  <% }) %>
+</div>

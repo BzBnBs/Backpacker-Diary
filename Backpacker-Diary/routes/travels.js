@@ -45,7 +45,7 @@ router.get('/search', (req, res, next) => {
 
 router.get('/:id', (req, res, next) => {
   const travelId = req.params.id;
-  
+
   Travel.findById(travelId, (err, travel) => {
     if (err) { return next(err); }
     res.render('travels/trip', { travel });
@@ -80,7 +80,7 @@ router.post('/:id', (req, res, next) => {
   
   Travel.findByIdAndUpdate(travelId, updates, (err, travel) => {
     if (err){ return next(err); }
-    return res.redirect('/travels');
+    return res.redirect('/travels/${travelId}');
   });
 });
 
@@ -90,7 +90,7 @@ router.post('/:id/delete', (req, res, next) => {
 
   Travel.findByIdAndRemove(id, (err, travel) => {
     if (err){ return next(err); }
-    return res.redirect('/travels');
+    return res.redirect('/');
   });
 
 });

@@ -13,6 +13,8 @@ mongoose.connect('mongodb://localhost/backpacker-diaries');
 var indexRouter = require('./routes/index');
 const travelRoutes = require('./routes/travels');
 
+
+
 var app = express();
 
 const url = 'mongodb://localhost/travel';

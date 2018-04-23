@@ -11,7 +11,9 @@ router.get('/new', (req, res, next) => {
 
 
 
+
 router.post('/', (req, res, next) => {
+  console.log('lalalalal')
   // Take the params, and translate them into a new object
   const travelInfo = {
       place: req.body.place,
@@ -20,15 +22,16 @@ router.post('/', (req, res, next) => {
       imageUrl: req.body.imageUrl,
       description: req.body.description
   };
-  
+  console.log("travelInfo");
   // Create a new Travel with the params
 
   const newTravel = new Travel(travelInfo);
+  
   // Save the travel to the DB
   newTravel.save( (err) => {
     if (err) { return next(err) }
     // redirect to the list of travels if it saves
-    return res.redirect('/travels');
+    return res.redirect('/');
   });
 });
 
@@ -80,7 +83,7 @@ router.post('/:id', (req, res, next) => {
   
   Travel.findByIdAndUpdate(travelId, updates, (err, travel) => {
     if (err){ return next(err); }
-    return res.redirect('/travels/${travelId}');
+    return res.redirect(`/travels/${travelId}`);
   });
 });
 
@@ -94,11 +97,6 @@ router.post('/:id/delete', (req, res, next) => {
   });
 
 });
-
-
-
-
-
 
 
 module.exports = router;

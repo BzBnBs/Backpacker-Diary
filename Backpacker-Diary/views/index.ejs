@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
+    
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <a href="/travels">Travels</a>
-    <a href="/travels/new">New</a>
-    <form action="/travels/search">
-    <input type="text" name="searchTerm" id="search-term">
-    <button type="submit">Search</button>
-  </form>
+    <div class= "image-home">
+      <img class= "background-image" src="/images/home.jpg" alt="">
+        <div class="buttons">
+          <form class="new" action="/travels/new">
+            <button class="enter" type="submit">New</button>
+          </form>
+          <form class="search" action="/travels/search">
+            <input type="text" name="searchTerm" id="search-term">
+            <button class="primary-btn" type="submit">Search</button>
+          </form>
+        </div>
+    </div>
+
+    <h1 class="travel">Travels</h1>
+    <ul class= "trips"> 
+    <% travels.forEach((travel) => { %>
+      <ul class= "info">
+          <li><%= travel.title%></li>
+          <li><%= travel.place%></li>
+          <img src="<%= travel.imageUrl%>" style="width:125px; heigth:auto;"> 
+          <li style="list-style-type: none;">
+          <form action="/travels/<%= travel._id %> ">
+            <button  type="submit" style="margin-bottom: 50px;"> + info</button>
+          </form>
+          </li>
+        </ul>
+    <% }) %>
+  </ul>
+
   </body>
 </html>

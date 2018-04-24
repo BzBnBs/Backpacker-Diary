@@ -2,9 +2,6 @@ const express = require('express');
 const Travel = require('../models/travel');
 const router  = express.Router();
 
-
-
-
 router.get('/new', (req, res, next) => {
   res.render('travels/new');
 });
@@ -27,7 +24,7 @@ router.post('/', (req, res, next) => {
   newTravel.save( (err) => {
     if (err) { return next(err) }
     // redirect to the list of travels if it saves
-    return res.redirect('/travels');
+    return res.redirect('/');
   });
 });
 
@@ -86,7 +83,7 @@ router.post('/:id', (req, res, next) => {
   
   Travel.findByIdAndUpdate(travelId, updates, (err, travel) => {
     if (err){ return next(err); }
-    return res.redirect('/travels/${travelId}');
+    return res.redirect(`/travels/${travelId}`);
   });
 });
 

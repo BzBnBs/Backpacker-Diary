@@ -18,41 +18,26 @@ a {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  margin: -10% 0 15% 0;
-  
+  margin: -10% 0 10% 0;  
 }
 
-.trips{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  padding: 0;
+.center {
+  margin: auto;
 }
 
-.info{
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 0;
+.container-newtravel { 
+  margin-right: 25%; margin-left: 25%; width: 100vw; 
 }
 
-.travel{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 80px;
-  font-size: 240%;
+.text-green {
+  color: #00ff8c;
 }
 
-.enter {
-  margin-top: 20px;
-  width: 100px;
-  height: 35px;
-  border-radius: 4px;
-  background: none;
-  border-style: 3px solid rgba(153, 67, 187, 0.7);
-  margin-bottom: 10px;
+.purple-bg {
+  background: #404598;
 }
 
-  
-.enter:hover{
-  background: rgba(133, 64, 197, 0.8);
+.arrow {
+  margin-left: 20px;
+  color: #00ff8c;
 }

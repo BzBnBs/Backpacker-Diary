@@ -8,9 +8,26 @@ a {
   color: #00B7FF;
 }
 
+.logo{
+  width: 35%;
+  position: absolute;
+  height: auto;
+}
+
 .background-image{
   width: 100%;
   height: auto;
+}
+
+.navbar {
+  
+  padding: 0;
+}
+
+footer{
+  height: 100px;
+  
+  bottom: 500px;
 }
 
 .buttons{
@@ -18,41 +35,95 @@ a {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  margin: -10% 0 15% 0;
+  margin: -10% 0 10% 0;
   
 }
 
-.trips{
+.title-2{
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  padding: 0;
+  height: 50px;
+  justify-content: center !important;
+  margin-bottom: 10px;
+ 
 }
 
-.info{
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 0;
+.search-results{
+  margin-top: 50px;
 }
 
-.travel{
+.container{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-md-3{
   display: flex;
   justify-content: center;
-  margin-bottom: 80px;
-  font-size: 240%;
+  margin: 0px 10px;
+  max-width: 580px;;
 }
 
-.enter {
-  margin-top: 20px;
-  width: 100px;
-  height: 35px;
-  border-radius: 4px;
-  background: none;
-  border-style: 3px solid rgba(153, 67, 187, 0.7);
-  margin-bottom: 10px;
+.title-1{
+  position: absolute;
+  color: white;
+  margin: 15% 10%;
+  width: 40%;
+  font-size: 400%;
 }
 
+
+.truck{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 50px;
+  /* padding-left: 4%;
+  padding-right: 4%;  */
   
-.enter:hover{
-  background: rgba(133, 64, 197, 0.8);
 }
+
+.picture{
+  display: flex;
+  flex-flow: wrap;
+  overflow: hidden;
+  margin: auto;
+  margin:30px;
+  height: 100%;
+  
+  background-color: #00B7FF;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.travels{
+  width: auto;
+  height: 100%;
+}
+
+.font{
+  font-weight: 300;
+}
+
+
+.center {
+  margin: auto;
+ }
+ 
+ .container-newtravel {
+  margin-right: 25%; margin-left: 25%; width: 100vw; 
+ }
+ 
+ .text-green {
+  color: #00ff8c;
+ }
+ 
+ .purple-bg {
+  background: #404598;
+ }
+ 
+ .arrow {
+  margin-left: 20px;
+  color: #00ff8c;
+ }

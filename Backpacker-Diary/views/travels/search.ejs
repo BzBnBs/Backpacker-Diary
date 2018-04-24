@@ -7,19 +7,25 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        <ul>
-        <h1>Travel</h1> 
+      
+
+
+    <h2 class='title-2 search-results'>Travels</h2>
+      <div class= 'truck'>
         <% travels.forEach((travel) => { %>
-            <li><%= travel.title%></li>
-            <li><%= travel.place%></li>
-            <img src="<%= travel.imageUrl%>" style="width:125px; heigth:auto;"> 
-            <li style="list-style-type: none;">
-            <form action="/travels/<%= travel._id %> ">
-                <button type="submit" style="margin-bottom: 50px;"> + info</button>
-            </form>
-            </li>
-        <% }) %>
-        </ul>
+            <div class='col-md-3 picture single-filter-content'>
+            <a href="/travels/<%= travel._id %> ">
+            <img class= 'travels' src="<%= travel.imageUrl%>" >
+                <div class='overlay overlay-bg-content d-flex align-items-center justify-content-center flex-column'>
+                <h4 class='text-white text-uppercase'> <%= travel.place%> </h4>
+                <div class='line'></div>
+                <h5 class='text-white font'> <%= travel.title%> </h5>
+                </div>
+            </a> 
+            </div>
+            <% }) %>
+            
+        </div>
     </body>
 </html>
 

@@ -13,7 +13,7 @@ router.get('/new', (req, res, next) => {
 
 
 router.post('/', (req, res, next) => {
-  console.log('lalalalal')
+  
   // Take the params, and translate them into a new object
   const travelInfo = {
       place: req.body.place,

@@ -1,20 +1,44 @@
 
+<section class="section-half gray-bg">
+ <div class="container-newtravel">
+   <div class="row justify-content-center">
 
-<form action="/travels" method="POST">
-  <label for="place">Place</label>
-  <input type="text" id="place" name="place">
+   </div>
+   <h3 class="ml-30">New memory? Keep it!</h3>
+   <div class="contact-form mt-30">
+     <div class="center">
 
-  <label for="title">Title</label>
-  <input type="text" name="title" id="title">
-
-  <label for="date">Date</label>
-  <input type="date" name="date" id="date">
-
-  <label for="image-url">Picture</label>
-  <input type="text" name="imageUrl" id="image-url">
-
-  <label for="description">Description</label>
-  <textarea type="text" name="description" id="description"></textarea>
-
-  <button type="submit">Create Memory</button>
-</form>
+       <form action="/travels" method="POST" class="contact-form">
+         <!-- <label for="place" class="col-sm-2 col-form-label">Place</label> -->
+         <div class="col-lg-6 single-input color-2 mb-10">
+           <input type="text" class="form-control" id="place" name="place" placeholder="place">
+         </div>
+       
+         <!-- <label for="title" class="col-sm-2 col-form-label">Title</label> -->
+         <div class="col-lg-6 single-input color-2 mb-10">
+           <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+         </div>
+       
+         <!-- <label for="date" class="col-sm-2 col-form-label">Date</label> -->
+         <div class="col-lg-6 single-input color-2 mb-10">
+           <input type="date" class="form-control" name="date" id="date" placeholder="date">
+         </div>
+       
+         <!-- <label for="image-url" class="col-sm-2 col-form-label">Picture</label> -->
+         <div class="col-lg-6 single-input color-2 mb-10">
+           <input type="text" class="form-control" id="image-url" placeholder="Picture">
+         </div>
+       
+         <!-- <label for="description" class="col-sm-2 col-form-label">Description</label> -->
+         <div class="col-lg-6 single-input color-2 mb-10">
+           <textarea type="text" class="form-control" id="description" name="description" placeholder="description"></textarea>
+         </div>
+         
+         <div class="col-lg-6 d-flex justify-content-center">
+           <button class="mt-20 primary-btn d-inline-flex align-items-center" type="submit">Create Memory</button>
+         </div>
+       </form>
+     </div>
+   </div>
+ </div>
+</section>

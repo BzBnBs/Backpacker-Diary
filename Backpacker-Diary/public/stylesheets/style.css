@@ -24,10 +24,12 @@ a {
   padding: 0;
 }
 
-footer{
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
   height: 100px;
-  
-  bottom: 500px;
 }
 
 .buttons{
@@ -56,12 +58,12 @@ footer{
   margin-right: auto;
 }
 
-.col-md-3{
+/* .col-md-3{
   display: flex;
   justify-content: center;
   margin: 0px 10px;
   max-width: 580px;;
-}
+} */
 
 .title-1{
   position: absolute;
@@ -72,26 +74,13 @@ footer{
 }
 
 
-.truck{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  width: 100%;
-  height: 300px;
-  margin-bottom: 50px;
-  /* padding-left: 4%;
-  padding-right: 4%;  */
-  
-}
-
 .picture{
   display: flex;
   flex-flow: wrap;
   overflow: hidden;
-  margin: auto;
-  margin:30px;
-  height: 100%;
-  
+  margin: 20px 0;
+  /* height: 100%; */
+  height: 60%;
   background-color: #00B7FF;
   padding-left: 0;
   padding-right: 0;
@@ -126,4 +115,18 @@ footer{
  .arrow {
   margin-left: 20px;
   color: #00ff8c;
+  border: 1.5px; 
  }
+
+ .gray-bg {
+  background: rgba(60, 64, 143, 0.1);
+}
+
+.primary-btn{
+  border: 1.5px solid #00ff8c;
+}
+
+.details-btn{
+  border: 1.5px solid #00ff8c;
+}
+

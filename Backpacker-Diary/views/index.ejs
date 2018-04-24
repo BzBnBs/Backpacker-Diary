@@ -1,48 +1,41 @@
-<!DOCTYPE html>
-<html>
-  <head>
-     
-  </head>
-  <body>
-   
-    <h1 class='title-1'>Remember all your experiences, enjoy all your travels</h1> 
-      <div class= "image-home">
-        <img class= "background-image" src="/images/home-2.jpg" alt="">
-          <div class="buttons">
-            <form class="new" action="/travels/new">
-              <button class="primary-btn text-white d-inline-flex align-items-center" type="submit">New</button>
-            </form>
-            <form class="new" action="/travels/search">
-              <input type="text" name="searchTerm" id="search-term">
-              <button class="primary-btn text-white d-inline-flex align-items-center" type="submit">Search</button>
-            </form>
-          </div>
+<div class="row">
+  <h1 class='title-1'>Remember all your experiences, enjoy all your travels</h1>
+  <div class= "image-home">
+    <img class= "background-image" src="/images/home-2.jpg" alt="">
+      <div class="buttons">
+        <form class="new" action="/travels/new">
+          <button class="primary-btn text-white d-inline-flex align-items-center" type="submit">New</button>
+        </form>
+        <form class="new" action="/travels/search">
+          <input type="text" name="searchTerm" id="search-term">
+          <button class="primary-btn text-white d-inline-flex align-items-center" type="submit">Search</button>
+        </form>
       </div>
-
- 
-<h2 class='title-2'>Travels</h2>
-<div class= 'truck'>
-  <% travels.forEach((travel) => { %>
-    <div class='col-md-3 picture single-filter-content'>
-     <a href="/travels/<%= travel._id %> ">
-      <img class= 'travels' src="<%= travel.imageUrl%>" >
-        <div class='overlay overlay-bg-content d-flex align-items-center justify-content-center flex-column'>
-          <h4 class='text-white text-uppercase'> <%= travel.place%> </h4>
-          <div class='line'></div>
-          <h5 class='text-white font'> <%= travel.title%> </h5>
-        </div>
-      </a> 
-    </div>
-    <% }) %>
-     
   </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class='title-2'>Travels</h2>
+    </div>
+  </div>
+  <div class="row">
+    
+      <% travels.forEach((travel) => { %>
+        <div class='col-md-4'>
+          <div class="picture single-filter-content">
+            <a href="/travels/<%= travel._id %> ">
+            <img class= 'travels' src="<%= travel.imageUrl%>" >
+              <div class='overlay overlay-bg-content d-flex align-items-center justify-content-center flex-column'>
+                <h4 class='text-white text-uppercase'> <%= travel.place%> </h4>
+                <div class='line'></div>
+                <h5 class='text-white font'> <%= travel.title%> </h5>
+              </div>
+            </a> 
+          </div>
+        </div>
+      <% }) %>
+    
+  </div>
+</div>
 
-
-
-  
-
-
-  
-
-  </body>
-</html>

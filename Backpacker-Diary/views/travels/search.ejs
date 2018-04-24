@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <ul>
   <h1>Searched results</h1>
   <% travel.forEach((travel) => { %>
@@ -15,3 +16,36 @@
     </li>
     <% }) %>
 </ul>
+=======
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+      
+
+
+    <h2 class='title-2 search-results'>Travels</h2>
+      <div class= 'truck'>
+        <% travels.forEach((travel) => { %>
+            <div class='col-md-3 picture single-filter-content'>
+            <a href="/travels/<%= travel._id %> ">
+            <img class= 'travels' src="<%= travel.imageUrl%>" >
+                <div class='overlay overlay-bg-content d-flex align-items-center justify-content-center flex-column'>
+                <h4 class='text-white text-uppercase'> <%= travel.place%> </h4>
+                <div class='line'></div>
+                <h5 class='text-white font'> <%= travel.title%> </h5>
+                </div>
+            </a> 
+            </div>
+            <% }) %>
+            
+        </div>
+    </body>
+</html>
+
+>>>>>>> fdd0d4e0cd9250b71fb0fc0a755f3a732dc65c4a

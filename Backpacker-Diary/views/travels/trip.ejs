@@ -6,7 +6,7 @@
                     <p class="text-white text-uppercase"><%= travel.place %></p>
                     <h2 class="h1 text-white text-uppercase mb-20 text-white"><%= travel.title %></h2>
                     <p class="text-white mb-15"><%= travel.description %></p>
-                    <p class="text-green"><%= travel.date %></p>
+                    <p class="text-green"><%= travel.date.toDateString() %></p>
                     <div class="">
                         <div class="d-flex justify-content-start">
                             <form class="new" action="/travels/<%= travel._id %>/delete" method="POST">
@@ -26,3 +26,8 @@
         </div>
     </div>
 </section>
+
+<script>
+    var d = new Date();
+    document.getElementById("demo").innerHTML = d.toDateString();
+</script>

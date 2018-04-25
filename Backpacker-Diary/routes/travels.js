@@ -33,14 +33,6 @@ router.post('/', (req, res, next) => {
 });
 
 router.get('/search', (req, res, next) => {
-  let query = req.query.searchTerm;
-  Travel.find({ place: query }, (err, travel) => {
-    if (err) { next(err) }
-    res.render('travels/search', { travel });
-  });
-});
-
-router.get('/search', (req, res, next) => {
   const searchId = req.query.searchTerm;
   
   Travel.find({ place: searchId }, (err, travels) => {

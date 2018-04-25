@@ -10,13 +10,24 @@
     <link rel="stylesheet" href="/stylesheets/bootstrap.css">
     <link rel="stylesheet" href="/stylesheets/main.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <%- style %>
   </head>
   <body>
     <% include ../partials/nav %>
     <%- body -%>
     <% include ../partials/footer %>
+    <%- script %>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+      </script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#search-term').on('click', function () {
+          $('#push').toggle();
+        })
+      });
+    </script>
   </body>
-  <script src="/js/jquery-2.2.4.min.js"></script>
-  <script src="/javascripts/bootstrap.min.js"></script>
-  
 </html>

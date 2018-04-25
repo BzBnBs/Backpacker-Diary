@@ -22,6 +22,8 @@ const url = 'mongodb://localhost/travel';
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set("layout extractScripts", true)
+app.set("layout extractStyles", true)
 
 app.use(logger('dev'));
 app.use(express.json());

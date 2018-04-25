@@ -46,7 +46,6 @@ footer {
   width: 100%;
   text-align: center;
   height: 100px;
-  margin-top: 30px;
 }
 
 .buttons{
@@ -187,4 +186,8 @@ footer {
   border-bottom-left-radius: 0;
   margin-left:-2px;
   padding: 0 15px;
+}
+
+.img-memory {
+  max-width: 650px;
 }

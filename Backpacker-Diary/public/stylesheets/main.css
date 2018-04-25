@@ -39,6 +39,7 @@
 }
 
 body {
+  background-color: rgba(60, 64, 143, 0.1);
   color: #777777;
   font-family: "Poppins", sans-serif;
   font-size: 14px;

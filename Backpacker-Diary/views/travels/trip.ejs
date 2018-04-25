@@ -1,33 +1,28 @@
-<body class="purple-bg">
-    <section class="section-full section-bg purple-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="studio-content">
-                        <p class="text-white text-uppercase"><%= travel.place %></p>
-                        <h2 class="h1 text-white text-uppercase mb-20 text-white"><%= travel.title %></h2>
-                        <p class="text-white mb-15"><%= travel.description %></p>
-                        <p class="text-green"><%= travel.date %></p>
-                        <div class="">
-                            <a href="/travels/<%= travel._id %>/edit" class="details-btn d-flex justify-content-center align-items-center">
-                                <span class="details">Edit</span>
-                                <span class="lnr lnr-arrow-right arrow"></span>
-                            </a>
-                            <div class="d-flex justify-content-start">
-                                <form class="new" action="/travels/<%= travel._id %>/delete" method="POST">
-                                    <button type="submit" class="btn primary-btn text-white mt-30">Delete Trip</button>
-                                </form>
-                            </div>
+<section class="section-full purple-bg">
+    <div class="container mt-40 mb-40">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="studio-content">
+                    <p class="text-white text-uppercase"><%= travel.place %></p>
+                    <h2 class="h1 text-white text-uppercase mb-20 text-white"><%= travel.title %></h2>
+                    <p class="text-white mb-15"><%= travel.description %></p>
+                    <p class="text-green"><%= travel.date %></p>
+                    <div class="">
+                        <div class="d-flex justify-content-start">
+                            <form class="new" action="/travels/<%= travel._id %>/delete" method="POST">
+                                <button type="submit" class="btn primary-btn text-white mt-15">Delete Trip</button>
+                            </form>
                         </div>
+                        <a href="/travels/<%= travel._id %>/edit" class="details-btn d-flex justify-content-center align-items-center">
+                            <span class="details">Edit</span>
+                            <span class="lnr lnr-arrow-right arrow"></span>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <img class="image-" src="<%= travel.imageUrl %>">
-                </div>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-memory" src="<%= travel.imageUrl %>">
             </div>
         </div>
-    </section>
-
-</body>
-
-
+    </div>
+</section>

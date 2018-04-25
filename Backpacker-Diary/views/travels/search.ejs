@@ -1,31 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-      
-
-
-    <h2 class='title-2 search-results'>Travels</h2>
-      <div class= 'truck'>
-        <% travels.forEach((travel) => { %>
-            <div class='col-md-3 picture single-filter-content'>
-            <a href="/travels/<%= travel._id %> ">
-            <img class= 'travels' src="<%= travel.imageUrl%>" >
-                <div class='overlay overlay-bg-content d-flex align-items-center justify-content-center flex-column'>
-                <h4 class='text-white text-uppercase'> <%= travel.place%> </h4>
-                <div class='line'></div>
-                <h5 class='text-white font'> <%= travel.title%> </h5>
-                </div>
-            </a> 
+<div class="container">
+    <section class="section-full">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class='title-2'>Travels</h2>
             </div>
-            <% }) %>
-            
         </div>
-    </body>
-</html>
+        <div class="row">
+    
+            <% travels.forEach((travel) => { %>
+                <div class='col-md-4'>
+                    <div class="picture single-filter-content">
+                        <a href="/travels/<%= travel._id %> ">
+                            <img class='travels' src="<%= travel.imageUrl%>">
+                            <div class='overlay overlay-bg-content d-flex align-items-center justify-content-center flex-column'>
+                                <h4 class='text-white text-uppercase'>
+                                    <%= travel.place%>
+                                </h4>
+                                <div class='line'></div>
+                                <h5 class='text-white font'>
+                                    <%= travel.title%>
+                                </h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <% }) %>
+    
+        </div>
 
+    </section>
+</div>

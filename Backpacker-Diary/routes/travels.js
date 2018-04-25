@@ -7,11 +7,8 @@ router.get('/new', (req, res, next) => {
 });
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> fdd0d4e0cd9250b71fb0fc0a755f3a732dc65c4a
 router.post('/', (req, res, next) => {
   
   // Take the params, and translate them into a new object
@@ -106,8 +103,4 @@ router.post('/:id/delete', (req, res, next) => {
 });
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> fdd0d4e0cd9250b71fb0fc0a755f3a732dc65c4a
 module.exports = router;

@@ -1,15 +1,16 @@
 const express = require('express');
 const Travel = require('../models/travel');
 const router  = express.Router();
+const multer = require('multer');
+const upload = multer({ dest: './public/uploads/' });
 
+//Visualizar formulario para crear un travel nuevo
 router.get('/new', (req, res, next) => {
   res.render('travels/new');
 });
 
-
-
-
-router.post('/', (req, res, next) => {
+//Enviar formulario rellenado de un travel nuevo
+router.post('/', upload.single('photo'), (req, res, next) => {
   
   // Take the params, and translate them into a new object
   const travelInfo = {
@@ -17,7 +18,13 @@ router.post('/', (req, res, next) => {
       title: req.body.title,
       date: req.body.date,
       imageUrl: req.body.imageUrl,
-      description: req.body.description
+      description: req.body.description,
+      picture: {
+        pic_path: `../uploads/${req.file.filename}`,
+        pic_name: `${req.file.originalname}.jpg`,
+      },
+      // pic_path: `/uploads/${req.file.filename}`,
+      // pic_name: req.file.originalname
   };
   console.log("travelInfo");
   // Create a new Travel with the params
@@ -31,6 +38,7 @@ router.post('/', (req, res, next) => {
     return res.redirect('/');
   });
 });
+
 
 router.get('/search', (req, res, next) => {
   const searchId = req.query.searchTerm;
@@ -62,7 +70,7 @@ router.get('/:id/edit', (req, res, next) => {
 });
 
 
-router.post('/:id', (req, res, next) => {
+router.post('/:id', upload.single('photo'), (req, res, next) => {
   const travelId = req.params.id;
   
   /*
@@ -74,7 +82,11 @@ router.post('/:id', (req, res, next) => {
       title: req.body.title,
       date: req.body.date,
       imageUrl: req.body.imageUrl,
-      description: req.body.description
+      description: req.body.description,
+      picture: {
+        pic_path: `../uploads/${req.file.filename}`,
+        pic_name: `${req.file.originalname}.jpg`,
+    },
   };
   
   Travel.findByIdAndUpdate(travelId, updates, (err, travel) => {

@@ -1,6 +1,8 @@
 var express = require('express');
 const Travel = require('../models/travel');
-var router = express.Router();
+var router = express.Router(); 
+var multer = require('multer');
+
 
 router.get('/', (req, res, next) => {
 

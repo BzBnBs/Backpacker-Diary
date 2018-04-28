@@ -8,7 +8,7 @@
       <div class="contact-form mt-30">
         <div class="center">
   
-          <form action="/travels" method="POST" class="contact-form">
+          <form action="/travels" method="POST" class="contact-form" enctype="multipart/form-data">
             <!-- <label for="place" class="col-sm-2 col-form-label">Place</label> -->
             <div class="col-lg-6 single-input color-2 mb-10">
               <input type="text" class="form-control" id="place" name="place" placeholder="place">
@@ -23,21 +23,42 @@
             <div class="col-lg-6 single-input color-2 mb-10">
               <input type="date" class="form-control" name="date" id="date" placeholder="date">
             </div>
-          
-            <!-- <label for="image-url" class="col-sm-2 col-form-label">Picture</label> -->
-            <div class="col-lg-6 single-input color-2 mb-10">
-              <input type="text" class="form-control" id="image-url" placeholder="Picture">
-            </div>
-          
+
+            
             <!-- <label for="description" class="col-sm-2 col-form-label">Description</label> -->
             <div class="col-lg-6 single-input color-2 mb-10">
               <textarea type="text" class="form-control" id="description" name="description" placeholder="description"></textarea>
             </div>
             
+            
+            <!-- <div class="col-lg-6 single-input color-2 mb-10">
+              <input type="text" name="name">
+              <input type="file" name="photo">
+            </div> -->
+
+            <div class="col-lg-6 color-2 mb-10 d-flex justify-content-center">
+              <span class="btn primary-btn d-inline-flex align-items-center">
+                Upload the picture
+                <input class="custom-file-input" type="file" name="photo">
+              </span>
+              <!-- <input type="text" class="form-control"> -->
+            </div>
+            
             <div class="col-lg-6 d-flex justify-content-center">
               <button class="mt-20 primary-btn d-inline-flex align-items-center" type="submit">Create Memory</button>
             </div>
+
+            <br>
+
+            
           </form>
+
+          <!-- <h2>Upload your photo</h2>
+          <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name">
+            <input type="file" name="photo">
+            <input type="submit" value="Save">
+          </form> -->
         </div>
       </div>
     </div>

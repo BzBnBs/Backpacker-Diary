@@ -25,7 +25,10 @@
         <div class='col-md-4'>
           <div class="picture single-filter-content">
             <a href="/travels/<%= travel._id %> ">
-            <img class= 'travels' src="<%= travel.imageUrl%>" >
+            <!-- <img class= 'travels' src="<%= travel.imageUrl%>" > -->
+
+            <img src="<%= travel.picture.pic_path %>" class="travels">
+
               <div class='overlay overlay-bg-content d-flex align-items-center justify-content-center flex-column'>
                 <h4 class='text-white text-uppercase'> <%= travel.place%> </h4>
                 <div class='line'></div>
@@ -34,7 +37,10 @@
             </a> 
           </div>
         </div>
+        <!-- <img class='travels' src="uploads/<%= travel.pic_path%>"> -->
       <% }) %>
+
+
 
   </div>
 </div>

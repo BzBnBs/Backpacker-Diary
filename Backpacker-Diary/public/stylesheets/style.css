@@ -12,6 +12,38 @@ a {
   color: #00ff8c;
 }
 
+.change{
+  font-weight: 500;
+  color:#fff;
+}
+
+.upload{
+  width: 44%;
+  border-radius: 0.8px;
+}
+
+.upload:hover{
+  background: #222222 !important;
+}
+
+.upload{
+  border: 1px solid #fff !important;
+}
+
+.texto{
+  font-weight: 300;
+  margin: 0 0 0 -15px;
+  color: #fff;
+}
+
+.primary-btn{
+  color: #fff ;
+}
+
+.primary-btn:hover{
+  color: #222222 !important;
+}
+
 
 
 .pogo{
@@ -25,9 +57,9 @@ a {
 }
 
 .logo{
-  width: 35%;
+  width: 30%;
   position: absolute;
-  margin: 20px;
+  margin: 20px 0 0 100px;
   height: auto;
 }
 
@@ -119,7 +151,12 @@ footer {
  }
  
  .container-newtravel {
-  margin-right: 25%; margin-left: 25%; width: 100vw; 
+  margin-right: 25%; width: 100vw; 
+  padding-left: 33%; 
+ }
+
+ .custom-file-input{
+  margin: -200px;
  }
  
  .text-green {
@@ -130,6 +167,7 @@ footer {
   background: #404598;
  }
  
+
  .arrow {
   margin-left: 20px;
   color: #00ff8c;

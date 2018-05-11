@@ -44,22 +44,24 @@ a {
   color: #222222 !important;
 }
 
-
+.nav-search{
+  margin-top: -2px;
+}
 
 .pogo{
   width: 35%;
   display: flex;
   flex-flow: row nowrap;
   position: absolute;
-  height: auto;
-  padding-left: 70%;
+  height: 80px;
+  padding-left: 60%;
   padding-top: 40px;
 }
 
 .logo{
-  width: 30%;
+  width: 35%;
   position: absolute;
-  margin: 20px 0 0 100px;
+  margin: 0px 0 0 100px;
   height: auto;
 }
 
@@ -86,16 +88,16 @@ footer {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  margin: -26% 0 10% 99px;
+  margin: -15% 0 10% 218px;
   
 }
 
 .title-2{
   display: flex;
   height: 50px;
-  justify-content: center !important;
+  margin-left: 60px;
   margin-bottom: 10px;
-  margin-top: 20px;
+  margin-top: 40px;
  
 }
 
@@ -199,7 +201,7 @@ footer {
 
 
 .animate {
-  width: 80px;
+  width: 170px;
   box-sizing: border-box;
   border: 2px solid #ccc;
   background:none;
@@ -216,7 +218,7 @@ footer {
 }
 
 .animate[type=text]:hover:focus {
-  width: 150px;
+  width: 200px;
  
 }
 
@@ -245,6 +247,8 @@ footer {
 
 .filter{
   background: rgba(32, 32, 32, 0.6);
+  padding-bottom: 0px;
+  margin-top: -100px;
 }
 
 .bgk{
